@@ -2,6 +2,7 @@ package listeners;
 
 import org.testng.*;
 import org.testng.internal.TestNGMethodFinder;
+import reports.ReportClass;
 
 public class NGListeners implements ITestListener, ISuiteListener, IInvokedMethodListener {
 
@@ -15,7 +16,7 @@ public class NGListeners implements ITestListener, ISuiteListener, IInvokedMetho
     }
 
     public  void onFinish(ISuite suite) {
-       // ReportClass.moveallureresult();
+        ReportClass.moveallureresult();
     }
 
 
