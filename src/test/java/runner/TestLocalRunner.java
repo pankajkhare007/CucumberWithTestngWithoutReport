@@ -8,12 +8,12 @@ import org.testng.annotations.Listeners;
 
 
 @CucumberOptions(glue={"demo.stepDefinitions"},
-        features = {"src/test/resources/Features"}
+        features = {"src/test/resources/Feature"}
        // plugin = {"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"}
-        //tags = ("@Regression")
+       // tags = ("@Regression")
 
 )
-@Listeners(NGListeners.class)
+@Listeners(listeners.NGListeners.class)
 public class TestLocalRunner extends AbstractTestNGCucumberTests {
 
 }

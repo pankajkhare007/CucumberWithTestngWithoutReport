@@ -1,4 +1,4 @@
-package stepDefinitions;
+package demo.stepDefinitions;
 
 import asserts.Assertions;
 import io.cucumber.java.Before;
@@ -17,14 +17,14 @@ public class DemoStep {
        String str= scenario.getName();
 
     }
-    @Step("Step Enter username")
-    @Given("^Enter username \"([^\"]*)\"$")
-    public void enter_username(String username) throws Throwable {
-        System.out.println(username);
+
+    @Given("Enter username")
+    public void enter_username() throws Throwable {
+        System.out.println("enter username for Demo1");
 
     }
 
-    @And("^Enter Password$")
+    @And("Enter Password")
     public void enter_Password() throws Throwable {
         System.out.println("Enter password");
 
