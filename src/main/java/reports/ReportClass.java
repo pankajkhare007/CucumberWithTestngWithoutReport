@@ -21,7 +21,7 @@ public class ReportClass {
         //System.getProperty("user.dir")+
        // a2Path = System.getProperty("user.dir")+"\\Reports\\AllureReports\\" + datetime;
         a2Path="C:\\Users\\pkhare\\.jenkins\\workspace\\CucumberWithTestngWithoutReport\\allure-results\\";
-        Arrays.stream(new File(a2Path).listFiles()).forEach(File::delete);
+       // Arrays.stream(new File(a2Path).listFiles()).forEach(File::delete);
         File f2 = new File(a2Path);
 
             try {
@@ -45,5 +45,20 @@ public class ReportClass {
 //            e.printStackTrace();
 //        }
 
+    }
+
+    public static void deleteDirectory(File file)
+    {
+
+        for (File subfile : file.listFiles()) {
+
+
+            if (subfile.isDirectory()) {
+                deleteDirectory(subfile);
+            }
+
+
+            subfile.delete();
+        }
     }
 }
