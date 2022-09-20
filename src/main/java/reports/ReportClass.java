@@ -19,30 +19,29 @@ public class ReportClass {
         // File filesList[] = f1.listFiles();
         //System.getProperty("user.dir")+
        // a2Path = System.getProperty("user.dir")+"\\Reports\\AllureReports\\" + datetime;
-        a2Path="C:\\Users\\pkhare\\.jenkins\\workspace\\CucumberWithTestngWithoutReport";
+        a2Path="C:\\Users\\pkhare\\.jenkins\\workspace\\CucumberWithTestngWithoutReport\\allure-results\\";
         File f2 = new File(a2Path);
-        boolean newfolder = f2.mkdir();
-        if (newfolder) {
+
             try {
                 Files.move(new File(aPath).toPath(), new File(a2Path).toPath(), StandardCopyOption.REPLACE_EXISTING);
             } catch (IOException e) {
                 e.printStackTrace();
             }
 
-        }
-        File batchf = new File(a2Path + "\\Reports.bat");
-        FileOutputStream fos = null;
-        try {
-            fos = new FileOutputStream(batchf);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        DataOutputStream dos = new DataOutputStream(fos);
-        try {
-            dos.writeBytes("cmd /k allure serve " + a2Path);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
+//        File batchf = new File(a2Path + "\\Reports.bat");
+//        FileOutputStream fos = null;
+//        try {
+//            fos = new FileOutputStream(batchf);
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//        }
+//        DataOutputStream dos = new DataOutputStream(fos);
+//        try {
+//            dos.writeBytes("cmd /k allure serve " + a2Path);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
     }
 }
