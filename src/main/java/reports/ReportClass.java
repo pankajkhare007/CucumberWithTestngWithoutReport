@@ -5,6 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Arrays;
 
 public class ReportClass {
 
@@ -20,6 +21,7 @@ public class ReportClass {
         //System.getProperty("user.dir")+
        // a2Path = System.getProperty("user.dir")+"\\Reports\\AllureReports\\" + datetime;
         a2Path="C:\\Users\\pkhare\\.jenkins\\workspace\\CucumberWithTestngWithoutReport\\allure-results\\";
+        Arrays.stream(new File(a2Path).listFiles()).forEach(File::delete);
         File f2 = new File(a2Path);
 
             try {
