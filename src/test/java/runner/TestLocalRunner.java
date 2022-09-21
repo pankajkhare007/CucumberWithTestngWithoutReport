@@ -8,8 +8,8 @@ import org.testng.annotations.Listeners;
 
 
 @CucumberOptions(glue={"demo.stepDefinitions"},
-        features = {"src/test/resources/Feature"},
-        plugin = {"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"}
+        features = {"src/test/resources/Feature"}
+        //plugin = {"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"}
        // tags = ("@Regression")
 
 )
