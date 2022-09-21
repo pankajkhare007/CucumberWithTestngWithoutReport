@@ -16,6 +16,7 @@ public class ReportClass {
         LocalDateTime now = LocalDateTime.now();
         String datetime = "Result" + dtn.format(now);
         String aPath = System.getProperty("user.dir") + "\\allure-results\\";
+        System.out.println("apath ====== "+aPath);
         File f1 = new File(aPath);
         // File filesList[] = f1.listFiles();
         //System.getProperty("user.dir")+
